@@ -1,59 +1,62 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<h1>Signup</h1>
-<table>
-    <form action="/", method="POST">
-        <tr>
-            <td> 
-                <label for="username">Username:</label>
-            </td>
-            <td>
-                <input id="username" type="text" name="username" value={{username}}></input>
-            </td>
-            <td>
-                <span class="error">{{username_error}}</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="pass1">Password:</label>
-            </td>
-            <td>
-                <input id="pass1" type="password" name="pass1"></input>
-            </td>
-            <td>
-                 <span class="error">{{pass1_error}}</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="pass2">Verify Password:</label>
-            </td>
-            <td>
-                <input id="pass2" type="password" name="pass2"></input>
-            </td>
-            <td>
-                <span class="error">{{pass2_error}}</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="email">Email (optional):</label>
-            </td>
-            <td>
-                <input id="email" type"text" name="email" value={{email}}></input>
-            </td>
-            <td>
-                <span class='error'>{{email_error}}</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                 <input type="submit" value="Submit">
-            </td>
-        </tr>  
-    </form>
-</table>
+<main>
+    <h1>Signup</h1>
+    <section class="container">
+        <table>
+            <form action="/", method="POST">
+                <tr>
+                    <td> 
+                        <label for="username">Username:</label>
+                    </td>
+                    <td>
+                        <input id="username" type="text" name="username" value={{username}}></input>
+                    </td>
+                    <td>
+                        <span class="error">{{username_error}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass1">Password:</label>
+                    </td>
+                    <td>
+                        <input id="pass1" type="password" name="pass1"></input>
+                    </td>
+                    <td>
+                        <span class="error">{{pass1_error}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass2">Verify Password:</label>
+                    </td>
+                    <td>
+                        <input id="pass2" type="password" name="pass2"></input>
+                    </td>
+                    <td>
+                        <span class="error">{{pass2_error}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email (optional):</label>
+                    </td>
+                    <td>
+                        <input id="email" type"text" name="email" value={{email}}></input>
+                    </td>
+                    <td>
+                        <span class='error'>{{email_error}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>  
+            </form>
+        </table>
+    </section>
+</main>
 {% endblock %}
